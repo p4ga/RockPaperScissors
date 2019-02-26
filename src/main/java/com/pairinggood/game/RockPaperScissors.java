@@ -11,6 +11,10 @@ public class RockPaperScissors {
 
     public String play(String firstGesture, String secondGesture) {
 
+        if (firstGesture.equals(secondGesture)) {
+            return "draw";
+        }
+
         List<String> gestures = new ArrayList<>();
         gestures.add(firstGesture);
         gestures.add(secondGesture);
@@ -39,6 +43,7 @@ public class RockPaperScissors {
         }
 
         return ROCK;
+
 
     }   
 }
