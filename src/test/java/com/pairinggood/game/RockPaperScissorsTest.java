@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class RockPaperScissorsTest {
 
     @Test
-    public void play_RockBeatsScissors() {
+    public void play_RockThenScissor_RockBeatsScissors() {
         //arrange
         RockPaperScissors game = new RockPaperScissors();
 
@@ -17,4 +17,17 @@ public class RockPaperScissorsTest {
         //assert
         assertEquals("rock", winner);
     }
+
+    @Test
+    public void play_ScissorThenRock_RockBeatsScissors() {
+        //arrange
+        RockPaperScissors game = new RockPaperScissors();
+
+        //act
+        String winner = game.play("scissors", "rock");
+
+        //assert
+        assertEquals("rock", winner);
+    }
+
 }
