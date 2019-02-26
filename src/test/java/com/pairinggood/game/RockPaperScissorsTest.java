@@ -52,7 +52,11 @@ public class RockPaperScissorsTest {
     @Test
     public void play_ScissorsThenScissors_Draw() {
         assertEquals("draw", game.play(SCISSORS, SCISSORS));
+    }
 
+    @Test(expected = NullPointerException.class)
+    public void play_PassNullArgument_ThenThrowsException() {
+        game.play(null, null);
     }
 
 }
