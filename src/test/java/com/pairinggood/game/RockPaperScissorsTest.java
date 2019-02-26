@@ -41,17 +41,17 @@ public class RockPaperScissorsTest {
 
     @Test
     public void play_RockThenRock_Draw() {
-        assertEquals("draw", game.play(ROCK, ROCK));
+        assertEquals(DRAW, game.play(ROCK, ROCK));
     }
 
     @Test
     public void play_PaperThenPaper_Draw() {
-        assertEquals("draw", game.play(PAPER, PAPER));
+        assertEquals(DRAW, game.play(PAPER, PAPER));
     }
 
     @Test
     public void play_ScissorsThenScissors_Draw() {
-        assertEquals("draw", game.play(SCISSORS, SCISSORS));
+        assertEquals(DRAW, game.play(SCISSORS, SCISSORS));
     }
 
     @Test(expected = NullPointerException.class)
